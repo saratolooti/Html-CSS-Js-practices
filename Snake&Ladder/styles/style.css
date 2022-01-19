@@ -1,0 +1,232 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body,html { height: 100%; }
+body
+{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../imgs/backwall.jpg");
+    backdrop-filter: blur(1px);
+    background-size: cover;
+}
+/*start box*/
+.blackback
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0, 0.7);
+    color: white;
+    z-index: 2;
+}
+.messagebox
+{
+    width: 50%;
+    height: 50vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 2.5vmin;
+    border-radius: 5px;
+    background-color: #825597;
+    animation: fade 2s ease-out 0s 1 normal none;
+}
+.buttons
+{
+    cursor: pointer;
+    padding: 5px;
+    color: white;
+    border: none;
+    border-radius: 2px;
+    background-color: #ddb357;
+    box-shadow: 0px 0px 10px rgb(63, 62, 62);
+}
+/*Game board*/
+.gameBoard
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.gameBoard>img
+{
+    position: absolute;
+    top: 55px;
+    left: 38px;
+    width: 89%;
+}
+/*main board*/
+#mainGame
+{
+    background-image: url("../imgs/board\ background.jpg");
+    border-collapse: collapse;
+    border: 20px solid #d3d3d3;
+    box-shadow: inset 1px 1px 20px black;
+}
+td
+{
+    color: #ddb357;
+    position: relative;
+    padding: 1.3em;
+    border: 2px solid #454545;
+    background-color: rgba(69,69,69, 0.4);
+    box-shadow: inset 1px 1px 30px black;
+}
+/*rolling dice box*/
+.rollBox
+{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5em;
+    margin: 10px;
+    background-color: rgba(112, 108, 108, 0.3);
+    border-radius: 5px;
+    backdrop-filter: blur(5px);
+}
+.rollBox img
+{
+    width: 2.5em;
+    border-radius: 5px;
+}
+#cube
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+#cube>div 
+{ 
+    position: absolute;
+    display: none;
+}
+#rollbutton
+{
+    cursor: pointer;
+    border: none;
+    background-color: rgb(20, 20, 20);
+    color: white;
+    font-weight: bold;
+    padding: 0.5em;
+}
+#rollbutton:hover
+{
+    color: black;
+    background-color: #e5383b;
+}
+/*players styles*/
+.player1
+{
+    max-width: 30%;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow:1px 1px 10px  #ff1317;
+}
+.player2 
+{ 
+    max-width: 30%;
+    position: absolute;
+    border-radius: 50%;
+    box-shadow:1px 1px 10px white;
+}
+/*positions of players*/
+.pos1
+{
+    bottom: 10%;
+    right: 10%;
+}
+.pos2
+{
+    top: 10%;
+    left: 10%;
+}
+.center
+{
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/*messages in the middle of game*/
+#prompt
+{
+    font-size: 5rem;
+    position: absolute;
+    background: rgba(0,0,0, 0.6);
+    color: white;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+#prompt>span
+{
+    position: relative;
+    animation: left_right 3s ease-out 0s 1 normal none;
+}
+@keyframes left_right 
+{
+    0%
+    {
+        left: -20%;
+        opacity: 0%;
+    }
+    50%
+    {
+        left: 0%;
+        opacity: 100%;
+    }
+    100%
+    {
+        left: 20%;
+        opacity: 0%;
+    }
+}
+/*message box of ending game*/
+#endingGame
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0, 0.7);
+    color: white;
+    z-index: 2;
+}
+
+@keyframes fade
+{
+    0%
+    {
+        opacity: 0%;
+    }    
+    100%
+    {
+        opacity: 100%;
+    }
+}
+#endMessage
+{
+    text-align: center;
+    font-size: 3vmin;
+}
+#refreshButton:hover { background-color: #e5383b; };

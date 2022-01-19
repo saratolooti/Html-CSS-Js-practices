@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <menu></menu>
+
+    <!-- main content -->
+    <main class="content">
+        <div class="musicplayer">
+            <header class="songCover mb">
+                <img src="img/Silver.jpg" alt="cover" class="cover">
+            </header>
+            <main class="songInfo mb">
+                <h1 id="songName">Silver</h1>
+                <h3 id="artistName" class="mb">The NBHD</h3>
+                <div class="progressContainer">
+                    <div id="songProgress"></div>
+                </div>
+                <audio src="audio/15. Silver.mp3" id="song"></audio>
+            </main>
+            <footer class="songController">
+                <div class="buttonsContainer">
+                    <!-- prev -->
+                    <button class="prevsong controlButton fa fa-step-backward"></button>
+                    <!-- play -->
+                    <div class="playSong controlButton">
+                        <i class="playIcone fa fa-play"></i>
+                        <div class="playSong-colored" id="playcolored">
+                            <div class="playSong-wrapper"></div>
+                        </div>
+                    </div>
+                    <!-- next -->
+                    <button class="nextsong controlButton fa fa-step-forward"></button>
+                </div>
+
+                <div class="buttonsContainer">
+                    <button class="favsong controlButton fa fa-heart"></button>
+                    <button class="listsong controlButton fas fa-list-ul"></button>
+                </div>
+            </footer>
+        </div>
+    </main>
+
+    <!-- script -->
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Snake & Ladder</title>
+        <link rel="stylesheet" href="styles/style.css">
+    </head>
+    <body>
+        <!--Start box-->
+        <div class="blackback" id="start">
+            <div class="messagebox">
+                <span>
+                    Hi<br>
+                    welcome to the <b>Snake and ladder</b> game<br><br>
+                    before you start playing there is some rules you have to know!<br>
+                    ~ press button <b>roll Dice</b> to rolling dice<br>
+                    ~ the red marble is Player 1 and the other is Player 2<br>
+                    ~ When you roll number 6,the program roll dice again automatically as an extra chance<br>
+                    Good Luck!
+                </span>
+                <button class="buttons" onclick="startGame()">Let's Start</button>
+            </div>
+        </div>
+
+        <!--rolling dice box-->
+        <div class="rollBox">
+            <div id="cube">
+                <div id="D6"><img src="imgs/6.png"></div>
+                <div id="D5"><img src="imgs/5.png"></div>
+                <div id="D4"><img src="imgs/4.png"></div>
+                <div id="D3"><img src="imgs/3.jpg"></div>
+                <div id="D2"><img src="imgs/2.png" ></div>
+                <div id="D1"><img src="imgs/1.png"></div>
+            </div>
+            <button id="rollbutton" onclick="rollDice('javascript:void(0)')">Roll Dice</button>
+        </div>
+
+        <!--Game board-->
+        <div class="gameBoard">
+            <!--this is the board-->
+            <table id="mainGame">
+                <tr>
+                    <td id="H100">100</td>
+                    <td id="H99">99</td>
+                    <td id="H98">98</td>
+                    <td id="H97">97</td>
+                    <td id="H96">96</td>
+                    <td id="H95">95</td>
+                    <td id="H94">94</td>
+                    <td id="H93">93</td>
+                    <td id="H92">92</td>
+                    <td id="H91">91</td>
+                </tr>
+                <tr>
+                    <td id="H81">81</td>
+                    <td id="H82">82</td>
+                    <td id="H83">83</td>
+                    <td id="H84">84</td>
+                    <td id="H85">85</td>
+                    <td id="H86">86</td>
+                    <td id="H87">87</td>
+                    <td id="H88">88</td>
+                    <td id="H89">89</td>
+                    <td id="H90">90</td>
+                </tr>
+                <tr>
+                    <td id="H80">80</td>
+                    <td id="H79">79</td>
+                    <td id="H78">78</td>
+                    <td id="H77">77</td>
+                    <td id="H76">76</td>
+                    <td id="H75">75</td>
+                    <td id="H74">74</td>
+                    <td id="H73">73</td>
+                    <td id="H72">72</td>
+                    <td id="H71">71</td>
+                </tr>
+                <tr>
+                    <td id="H61">61</td>
+                    <td id="H62">62</td>
+                    <td id="H63">63</td>
+                    <td id="H64">64</td>
+                    <td id="H65">65</td>
+                    <td id="H66">66</td>
+                    <td id="H67">67</td>
+                    <td id="H68">68</td>
+                    <td id="H69">69</td>
+                    <td id="H70">70</td>
+                </tr>
+                <tr>
+                    <td id="H60">60</td>
+                    <td id="H59">59</td>
+                    <td id="H58">58</td>
+                    <td id="H57">57</td>
+                    <td id="H56">56</td>
+                    <td id="H55">55</td>
+                    <td id="H54">54</td>
+                    <td id="H53">53</td>
+                    <td id="H52">52</td>
+                    <td id="H51">51</td>
+                </tr>
+                <tr>
+                    <td id="H41">41</td>
+                    <td id="H42">42</td>
+                    <td id="H43">43</td>
+                    <td id="H44">44</td>
+                    <td id="H45">45</td>
+                    <td id="H46">46</td>
+                    <td id="H47">47</td>
+                    <td id="H48">48</td>
+                    <td id="H49">49</td>
+                    <td id="H50">50</td>
+                </tr>
+                <tr>
+                    <td id="H40">40</td>
+                    <td id="H39">39</td>
+                    <td id="H38">38</td>
+                    <td id="H37">37</td>
+                    <td id="H36">36</td>
+                    <td id="H35">35</td>
+                    <td id="H34">34</td>
+                    <td id="H33">33</td>
+                    <td id="H32">32</td>
+                    <td id="H31">31</td>
+                </tr>
+                <tr>
+                    <td id="H21">21</td>
+                    <td id="H22">22</td>
+                    <td id="H23">23</td>
+                    <td id="H24">24</td>
+                    <td id="H25">25</td>
+                    <td id="H26">26</td>
+                    <td id="H27">27</td>
+                    <td id="H28">28</td>
+                    <td id="H29">29</td>
+                    <td id="H30">30</td>
+                </tr>
+                <tr>
+                    <td id="H20">20</td>
+                    <td id="H19">19</td>
+                    <td id="H18">18</td>
+                    <td id="H17">17</td>
+                    <td id="H16">16</td>
+                    <td id="H15">15</td>
+                    <td id="H14">14</td>
+                    <td id="H13">13</td>
+                    <td id="H12">12</td>
+                    <td id="H11">11</td>
+                </tr>
+                <tr>
+                    <td id="H1">1</td>
+                    <td id="H2">2</td>
+                    <td id="H3">3</td>
+                    <td id="H4">4</td>
+                    <td id="H5">5</td>
+                    <td id="H6">6</td>
+                    <td id="H7">7</td>
+                    <td id="H8">8</td>
+                    <td id="H9">9</td>
+                    <td id="H10">10</td>
+                </tr>
+
+            </table>
+
+            <!--this is the snakes and ladders-->
+            <img src="imgs/snakes&ladders.png">
+        </div>
+
+        <!--this is for messages in the middle of game-->
+        <div id="prompt">
+            <span id="text"></span> 
+        </div>
+
+        <!--this is for message box at the end of the game-->
+        <div id="endingGame" class="blackback">
+            <div class="messagebox">
+                <span id="endMessage"></span>
+                <button id="refreshButton" class="buttons" onclick="endGame(1)">Play Again!</button>
+            </div>
+        </div>
+        
+        <!--script-->
+        <script src="script/script.js"></script>
+    </body>
+</html>

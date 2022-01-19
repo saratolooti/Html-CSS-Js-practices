@@ -1,0 +1,105 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+body {
+  display: flex;
+  padding: 5em;
+  justify-content: space-between;
+  align-items: center;
+  background: #7aa0a7;
+}
+h1 {
+  color: #e0e1dd;
+}
+form {
+  padding: 2em;
+  display: flex;
+  border-radius: 0.2em;
+  flex-direction: column;
+  background: rgb(108, 177, 194);
+  box-shadow: 0 0 25px rgb(65, 82, 87);
+}
+input::placeholder {
+  color: #6b7e97;
+}
+input[type="text"],
+input[type="password"] {
+  color: #e0e1dd;
+  padding: 0.4em 0.5em;
+  margin-bottom: 2em;
+  border: none;
+  background: transparent;
+  border-bottom: 0.2em solid #003566;
+}
+input[type="text"]:focus,
+input[type="password"]:focus {
+  outline: 0;
+  border-radius: 0.2em;
+  border: 0.2em solid #003566;
+  transition: 0.5s;
+}
+.passwordBox {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.eye {
+  position: absolute;
+  right: 0.4em;
+  top: 0.5em;
+  opacity: 0;
+  color: #003566;
+}
+input[type="password"]:focus + .eye {
+  opacity: 1;
+  cursor: pointer;
+}
+input[type="submit"] {
+  color: #e0e1dd;
+  cursor: pointer;
+  border: none;
+  padding: 0.7em 0.5em;
+  border-radius: 0.2em;
+  background: #003566;
+}
+/*top -5.9em*/
+.beam {
+  position: absolute;
+  right: 1.3em;
+  top: 27%;
+  clip-path: polygon(0 0, 0% 100%, 100% 50%);
+  width: 100vw;
+  height: 30vw;
+  mix-blend-mode: multiply;
+  transition: transform 300ms ease-out;
+  transform-origin: 100% 50%;
+  transform: translateY(-50%) rotate(var(--beamDegrees, 0));
+  pointer-events: none;
+}
+
+/* extra css code */
+
+.show-password .beam {
+  background: #ffd60a;
+}
+
+.show-password {
+  background: #000814;
+}
+
+.show-password form {
+  background: #001d3d;
+}
+
+.show-password .eye {
+  color: #ffd60a;
+  opacity: 1;
+  cursor: pointer;
+}

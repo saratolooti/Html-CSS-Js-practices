@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <link rel="stylesheet" href="style/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    </head>
+    <body>
+        <!-- dark/light mode button -->
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider btn-toggle"></span>
+        </label>
+        <!-- calculator -->
+        <div class="container">
+            <div class="result-box">
+                <input type="text" id="calculat" readonly value="">
+            </div>
+            <table class="buttons-container">
+                <tr>
+                    <th><button onclick="empty()" class="symbols">C</button></th>
+                    <th><button onclick="division()" class="symbols">/</button></th>
+                    <th><button onclick="Multiplication()" class="symbols">×</button></th>
+                    <th><button onclick="undo()" class="symbols"><i class="fa fa-backspace"></i></button></th>
+                </tr>
+                <tr>
+                    <td><button class="numbers" onclick="num7()">7</button></td>
+                    <td><button class="numbers" onclick="num8()">8</button></td>
+                    <td><button class="numbers" onclick="num9()">9</button></td>
+                    <th><button class="symbols" onclick="minus()">-</button></th>
+                </tr>
+                <tr>
+                    <td><button class="numbers" onclick="num4()">4</button></td>
+                    <td><button class="numbers" onclick="num5()">5</button></td>
+                    <td><button class="numbers" onclick="num6()">6</button></td>
+                    <th><button class="symbols" onclick="plus()">+</button></th> 
+                </tr>
+                <tr>
+                    <td><button class="numbers" onclick="num1()">1</button></td>
+                    <td><button class="numbers" onclick="num2()">2</button></td>
+                    <td><button class="numbers" onclick="num3()">3</button></td>
+                    <th rowspan="2"><button class="symbols equalsign" onclick="equal()">=</button></th>
+                </tr>
+                <tr>
+                    <td><button class="numbers" onclick="percentage()">%</button></td>
+                    <td><button class="numbers" onclick="num0()">0</button></td>
+                    <td><button class="numbers" onclick="sign()">.</button></td>
+                </tr>
+            </table>
+        </div>
+        <script src="script/script.js"></script>
+    </body>
+</html>
